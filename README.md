@@ -213,6 +213,3 @@ Try these simple exercises to reinforce your learning:
 Visit the [Dart documentation](https://dart.dev/guides) to learn more about Dart and explore additional features.
 
 Happy coding!
----
-
-Feel free to customize the README to fit your specific teaching style and add or modify content based on your students' needs. This README provides a structured introduction to Dart programming with code samples for each concept.
