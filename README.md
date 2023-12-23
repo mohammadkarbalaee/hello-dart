@@ -1,5 +1,7 @@
 # Getting Started with Dart Programming
 
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*nucyFw-E5Lotofy1WSWMqw.png"/>
+
 Welcome to the world of Dart programming! This guide will help you get started with the basics of programming and Dart using DartPad.
 
 ## Table of Contents
