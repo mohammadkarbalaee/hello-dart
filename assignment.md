@@ -1,5 +1,7 @@
 ## Homework Assignment: Dart Quiz Game
 
+<img src="https://img.freepik.com/premium-vector/quiz-logo-with-speech-bubble-icon_149152-811.jpg?w=1800"/>
+
 **Objective:**
 Create a simple quiz game using Dart that quizzes the user on general knowledge questions. The game should include multiple-choice questions, keep track of the user's score, and provide feedback at the end.
 
@@ -40,5 +42,5 @@ For students who want an extra challenge, encourage them to implement additional
 
 **Submission:**
 Students can submit their Dart files containing the quiz game code along with a brief reflection on their design choices and any challenges they faced during the implementation.
-
-This assignment not only reinforces the programming concepts covered but also allows students to apply their knowledge in a fun and interactive way. Happy coding!
+Like your previous assignment, I want you to fork this repo and do the assignment. Make sure to create a folder under the "answers" folder with your name and put your dart files in that.
+When you are done with your exercise, make a pull request to this repo and I will review your beautiful codes. Happy coding!
