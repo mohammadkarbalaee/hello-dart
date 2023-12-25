@@ -1,6 +1,26 @@
 import 'dart:io';
 import 'dart:math';
 
+// Black:   \x1B[30m
+// Red:     \x1B[31m
+// Green:   \x1B[32m
+// Yellow:  \x1B[33m
+// Blue:    \x1B[34m
+// Magenta: \x1B[35m
+// Cyan:    \x1B[36m
+// White:   \x1B[37m
+// Reset:   \x1B[0m
+
+String resetColor = '\x1B[0m';
+String redColor = '\x1B[31m';
+String blueColor = '\x1B[34m';
+String greenColor = '\x1B[32m';
+String whiteColor = '\x1B[37m';
+String yellowColor = '\x1B[33m';
+String blackColor = '\x1B[30m';
+String magentaColor = '\x1B[35m';
+String cyanColor = '\x1B[36m';
+
 class Quiz {
   List<Map<String, dynamic>> generalInfoQuestions = [
     {
@@ -214,7 +234,7 @@ class Quiz {
   int score = 0;
 
   void startQuiz() {
-    print('\nWelcome to the Dart Quiz Game!\n');
+    print('\n${magentaColor}Welcome to the Dart Quiz Game! ${resetColor}\n');
     print('Please choose a category to be quizzed on:');
     print('1. General Information\n2. Technology\n');
 
@@ -226,13 +246,13 @@ class Quiz {
       askQuestions(technologyQuestions);
     } else {
       print(
-          'Invalid choice. Please restart the quiz and select a valid category.');
+          '${redColor}Invalid choice. Please restart the quiz and select a valid category.${resetColor}');
     }
   }
 
   void askQuestions(List<Map<String, dynamic>> questions) {
     print(
-        'Answer each question with the correct option number => [1 to 4]. Let\'s begin!\n');
+        '\nAnswer each question with the correct ${cyanColor}option number => [1 to 4] ${resetColor}. Let\'s begin!\n');
 
     List<Map<String, dynamic>> remainingQuestions = List.from(questions);
 
@@ -254,7 +274,8 @@ class Quiz {
   }
 
   void displayQuestion(Map<String, dynamic> question, int questionNumber) {
-    print('Question $questionNumber: ${question['statement']}');
+    print(
+        '${magentaColor}Question $questionNumber: ${yellowColor} ${question['statement']} ${resetColor}');
     for (var i = 0; i < question['options'].length; i++) {
       print('${question['options'][i]}');
     }
@@ -269,10 +290,11 @@ class Quiz {
     var correctAnswer = question['correctAnswer'];
 
     if (userAnswer != "" && correctAnswer.startsWith(userAnswer)) {
-      print('Correct! You earned a point.\n');
+      print('${greenColor}Correct! You earned a point.${resetColor}\n');
       score++;
     } else {
-      print('Wrong! The correct answer is: ${question['correctAnswer']}\n');
+      print(
+          '${redColor}Wrong! The correct answer is:${resetColor} ${blueColor} ${question['correctAnswer']}${resetColor}\n');
     }
   }
 
@@ -281,11 +303,12 @@ class Quiz {
     print('Your final score is: $score/$totalQuestions');
 
     if (score == totalQuestions) {
-      print('Congrats! You\'re a Quiz Master!');
+      print('${cyanColor}Congrats! You\'re a Quiz Master! ${resetColor}');
     } else if (score >= totalQuestions ~/ 2) {
-      print('Good job! Keep practicing!');
+      print('${blueColor}Good job! Keep practicing! ${resetColor}');
     } else {
-      print('Better luck next time. Keep practicing!');
+      print(
+          '${yellowColor}Better luck next time. Keep practicing! ${resetColor}');
     }
   }
 }
