@@ -47,7 +47,7 @@ void main() {
                print('Correct👍');
             result = result + 1;
         } else {
-            print('Incorrect👎')
+            print('Incorrect👎');
                 wrong.add(i);
             }
        }
@@ -58,7 +58,7 @@ void main() {
         print('${questions[i]}\rcorrect answer : ${answers[i]}');
     }
        //here we show the result and how was their job
-       print('Dear $userName here is your socre : $result');
+       print('Dear $userName ,here is your socre : $result\r');
        if (7 <= result) {
            print('You\'re doing exceptionally well');
        } else if (3 <= result) {
